@@ -2,6 +2,8 @@ package com.orangesunshine.moritwitter;
 
 import android.support.v7.app.AppCompatActivity;
 
+//todo:  keystore, fabric
+
 public class TImeLine extends AppCompatActivity {
 
 //    ListView listView;

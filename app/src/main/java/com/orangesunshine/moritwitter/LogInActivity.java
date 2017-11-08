@@ -24,10 +24,6 @@ import twitter4j.conf.ConfigurationBuilder;
 
 public class LogInActivity extends AppCompatActivity {
 
-//    public final static String TWITTER_CONSUMER_KEY = "OOPek21f1SbV3xr2tSHi1m0J1";
-//    public final static String TWITTER_CONSUMER_SECRET = "WgYXSF9ZaFNOE6RXcsdSe3AAFdL6k0zr29jSGIfeh3WIxlOv9X";
-    //static final String TWITTER_CALLBACK_URL = "oauth://callback";
-
     public static String PREFERENCE_NAME = "vRyd370KE4";
     public static final String PREF_KEY_OAUTH_TOKEN = "kJRo1truUy";
     public static final String PREF_KEY_OAUTH_SECRET = "ObVKkjsl5Q";

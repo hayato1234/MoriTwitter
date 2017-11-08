@@ -9,3 +9,6 @@
 keystore.properties
 #for twitter api keys
 gradle.properties
+/app/fabric.properties
+/app
+/app/build/generated/source/buildConfig/androidTest/debug/com/orangesunshine/moritwitter/test/BuildConfig.java

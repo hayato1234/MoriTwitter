@@ -58,9 +58,7 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="8603a164f8b679d208aba69f3f4d9ab0e3286874" />
+
 
         <activity
             android:name="com.orangesunshine.moritwitter.ShowMedia.ShowMediaActivity"

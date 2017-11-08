@@ -14,17 +14,21 @@ repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
 def keyStorePropertiesFile = rootProject.file("keystore.properties")
-def keyStoreProperties = new Properties()
-keyStoreProperties.load(new FileInputStream(keyStorePropertiesFile))
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keyStorePropertiesFile))
 
 android {
 
     signingConfigs {
         config {
-            keyAlias keyStoreProperties['keyAlias']
-            keyPassword keyStoreProperties['keyPassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
         }
     }
+
+
     compileSdkVersion 25
     buildToolsVersion '26.0.2'
     defaultConfig {
