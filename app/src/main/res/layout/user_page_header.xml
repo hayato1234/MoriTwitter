@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/user_page_header"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@android:color/white"
+        android:contentDescription="@string/user_header"/>
+
+    <LinearLayout
+        android:id="@+id/icon_and_description"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:paddingEnd="3dp"
+        android:layout_below="@id/user_page_header">
+
+        <ImageView
+            android:id="@+id/user_page_icon1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@android:color/white"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/user_icon"/>
+
+        <TextView
+            android:id="@+id/user_page_description"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:paddingStart="5dp"
+            android:layout_gravity="center"/>
+
+        <RelativeLayout
+            android:id="@+id/follow_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/follow_switch_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_unfollow"
+                app:riv_mutate_background="true"
+                android:background="@color/green"
+                app:riv_corner_radius="5dp"
+                app:riv_border_width="1dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+    <ImageView
+        android:id="@+id/more_info_button"
+        android:layout_width="220dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/icon_and_description"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_drop_down"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/more_info_container"
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/more_info_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/user_page_following_count"
+            android:paddingStart="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="3dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/user_page_following_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:text="Following"
+            />
+
+        <TextView
+            android:id="@+id/user_page_follower_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="6dp"
+            android:paddingEnd="3dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/user_page_follower_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:text="Follower"
+            />
+
+        <ImageView
+            android:id="@+id/user_page_likes_page"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_favarit_on"/>
+        <ImageView
+            android:id="@+id/user_page_media_page"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_media"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/more_info_container2"
+        android:layout_below="@id/more_info_container"
+        android:paddingTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/user_page_location_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_location"
+            />
+        <TextView
+            android:id="@+id/user_page_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="map"/>
+        <ImageView
+            android:id="@+id/user_page_link_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_link"/>
+        <TextView
+            android:id="@+id/user_page_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/less_info_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/more_info_container2"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_drop_up"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/less_info_button"
+        android:background="#000000"/>
+
+
+</RelativeLayout>

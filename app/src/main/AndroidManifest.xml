@@ -1,20 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.simleman.moritwitter">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
+        android:name="com.orangesunshine.moritwitter.ApplicationJava"
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="${appName}"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name="com.orangesunshine.moritwitter.TImeLine"
+            android:label="@string/title_activity_time_line"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orangesunshine.moritwitter.UserPage"
+            android:label="@string/title_activity_user_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orangesunshine.moritwitter.TweetDetailActivity"
+            android:label="@string/title_activity_tweet_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orangesunshine.moritwitter.FollowList.FollowListMain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.orangesunshine.moritwitter.conversation.ReplyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.orangesunshine.moritwitter.LogInActivity"
+            android:label="@string/title_activity_log_in"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="oauth" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name="com.orangesunshine.moritwitter.ShowMedia.ShowMediaActivity"
+            android:label="@string/title_activity_show_media"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orangesunshine.moritwitter.ShowMedia.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_video"
+            android:theme="@style/FullscreenTheme"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orangesunshine.moritwitter.FollowList.FollowListFromUserActivity"
+            android:label="FollowList"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orangesunshine.moritwitter.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name="com.orangesunshine.moritwitter.search.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.orangesunshine.moritwitter.favorite.FavActivity" />
+        <activity android:name="com.orangesunshine.moritwitter.media.MediaActivity"></activity>
     </application>
 
 </manifest>

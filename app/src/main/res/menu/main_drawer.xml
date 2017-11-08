@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<group android:checkableBehavior="single">-->
+    <!--<item-->
+    <!--android:id="@+id/nav_camera"-->
+    <!--android:icon="@drawable/ic_menu_camera"-->
+    <!--android:title="Import" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_gallery"-->
+    <!--android:icon="@drawable/ic_menu_gallery"-->
+    <!--android:title="Gallery" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_slideshow"-->
+    <!--android:icon="@drawable/ic_menu_slideshow"-->
+    <!--android:title="Slideshow" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_manage"-->
+    <!--android:icon="@drawable/ic_menu_manage"-->
+    <!--android:title="Tools" />-->
+    <!--</group>-->
+
+    <!--<group android:id="@+id/nav_accounts_list">-->
+    <!--<item android:title="@string/accounts">-->
+    <!--<menu>-->
+    <!--<item-->
+    <!--android:id="@+id/nav_share"-->
+    <!--android:icon="@drawable/ic_menu_share"-->
+    <!--android:title="Share" />-->
+    <!--</menu>-->
+    <!--</item>-->
+    <!--</group>-->
+
+    <group
+        android:id="@+id/account_group"
+        android:orderInCategory="1">
+        <item android:title="@string/accounts">
+            <menu>
+                <item
+                    android:id="@+id/nav_add_account"
+                    android:icon="@drawable/ic_nav_add"
+                    android:orderInCategory="5"
+                    android:title="@string/add_account" />
+                <item
+                    android:id="@+id/nav_log_out_all"
+                    android:orderInCategory="2"
+                    android:title="@string/sign_out_all" />
+            </menu>
+        </item>
+    </group>
+    <group android:orderInCategory="100">
+        <item android:title="other">
+            <menu>
+                <item
+                    android:id="@+id/nav_zero"
+                    android:icon="@drawable/ic_rest"
+                    android:orderInCategory="100"
+                    android:title="reset all tweet count" />
+                <item
+                    android:id="@+id/nav_setting"
+                    android:icon="@drawable/ic_nav_setting"
+                    android:orderInCategory="200"
+                    android:title="@string/settings" />
+            </menu>
+        </item>
+    </group>
+</menu>

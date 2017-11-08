@@ -1,26 +1,89 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.21.6'
+    }
+}
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+def keyStorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keyStorePropertiesFile))
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
 
+    signingConfigs {
+        config {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId "com.simleman.moritwitter"
+        applicationId "com.orangesunshine.moritwitter"
         minSdkVersion 19
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 25
+        versionCode 5
+        versionName "1.0.5"
+        buildConfigField "String", "TWITTER_KEY", TWITTER_KEY
+        buildConfigField "String", "TWITTER_SECRET", TWITTER_SECRET
+        buildConfigField "String", "YOUTUBE_KEY", YOUTUBE_KEY
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
-        release {
+        debug {
+            manifestPlaceholders = [appName: "Moritwitter.Debug"]
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro', 'shrinker-rules.pro'
+        }
+        release {
+            shrinkResources true
+            minifyEnabled true
+            manifestPlaceholders = [appName: "MoriTwitter"]
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', 'shrinker-rules.pro'
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/twitter4j-async-4.0.4.jar')
+    compile files('libs/twitter4j-core-4.0.6.jar')
+    compile('com.twitter.sdk.android:twitter:2.3.2@aar') {
+        transitive = true;
+    }
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:gridlayout-v7:25.3.1'
+    compile 'com.afollestad.material-dialogs:core:0.9.4.4'
+    compile 'com.squareup.picasso:picasso:2.4.0'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.facebook.fresco:fresco:1.4.0'
+    compile 'me.relex:photodraweeview:1.1.2'
+    compile 'me.relex:circleindicator:1.2.1'
+    compile 'com.github.armcha:AutoLinkTextView:0.3.0'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.makeramen:roundedimageview:2.3.0'
+    compile 'com.android.support:support-vector-drawable:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.jakewharton.timber:timber:4.5.1'
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }
