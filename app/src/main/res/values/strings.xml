@@ -1,4 +1,139 @@
 <resources>
     <string name="app_name">MoriTwitter</string>
     <string name="title_activity_time_line">TImeLine</string>
+    <string name="at">"@"</string>
+    <string name="title_activity_user_page">UserPage</string>
+    <string name="user_icon">user_icon</string>
+    <string name="user_header">user_header</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_tweet_detail">TweetDetailActivity</string>
+    <string name="user_name">user name</string>
+    <string name="screen_name">screen name</string>
+    <string name="some_text">some text</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_log_in">LogInActivity</string>
+    <string name="welcome_to_moritwitter">Welcome to MoriTwitter!</string>
+    <string name="title_activity_show_media">ShowMediaActivity</string>
+
+    <string name="permission_needed">Permission needed to save file</string>
+    <string name="image_saved">Image Saved</string>
+    <string name="image_not_saved">Failed to save Image</string>
+
+    <string name="title_activity_video">VideoActivity</string>
+
+    <string name="Invalid_URL">Invalid URL</string>
+    <string name="downloading">DownLoading</string>
+    <string name="delete_question">Delete?</string>
+    <string name="ok">OK</string>
+    <string name="deleted">Deleted</string>
+    <string name="stop_following">stop following \u0020</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="loading_massage">Loading. Please wait…</string>
+    <string name="error">Error</string>
+    <string name="erro_duplicate_tweet">Error: Duplicate Tweet</string>
+    <string name="title_activity_test_delete">test_delete</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="accounts">Accounts</string>
+    <string name="settings">Settings</string>
+    <string name="add_account">Add Account</string>
+    <string name="sign_out">sign out</string>
+    <string name="cancel">Cancel</string>
+    <string name="retweet">Retweet</string>
+    <string name="like">Like</string>
+    <string name="ask_retweet">Do you want to retweet?</string>
+    <string name="undo_retweet">Undo Retweet</string>
+    <string name="stop">Stop</string>
+    <string name="ask_disable_count">Stop showing new tweet count?</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="network_error">Internet Connection Error</string>
+    <string name="warning_private_account">This account is private</string>
+    <string name="reset_tweet_count">reset_tweet_count</string>
+    <string name="log_out_from_all_accounts">log out from all accounts</string>
+    <string name="log_out_all">log out all</string>
+    <string name="sign_out_all">Sign out all</string>
+    <string name="ask_sign_out">Sign out?</string>
+    <string name="ask_able_count">Show new tweet count?</string>
+    <string name="show">show</string>
+    <string name="app_icon">icon</string>
+    <string name="media1">media1</string>
+    <string name="could_not_retweet">could not retweet</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="Users">Users</string>
+    <string name="tweeting">tweeting</string>
 </resources>

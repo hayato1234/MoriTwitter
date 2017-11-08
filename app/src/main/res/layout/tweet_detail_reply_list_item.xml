@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--<View-->
+        <!--android:id="@+id/top_line"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@android:color/darker_gray"-->
+        <!--android:paddingBottom="10dp"/>-->
+
+    <ImageView
+        android:id="@+id/detail_prof_pic"
+
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <LinearLayout
+        android:id="@+id/name_date_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/detail_prof_pic"
+
+        android:background="@android:color/background_light">
+        <TextView
+            android:id="@+id/detail_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/user_name"/>
+        <TextView
+            android:id="@+id/at_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/at"/>
+        <TextView
+            android:id="@+id/detail_screen_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_name"/>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/detail_reply_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_date_section"
+        android:layout_toEndOf="@id/detail_prof_pic"
+        android:text="time"/>
+
+
+    <TextView
+        android:id="@+id/detail_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/some_text"
+        android:layout_below="@+id/detail_reply_time"
+        android:layout_toEndOf="@+id/detail_prof_pic" />
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/detail_content"
+        android:background="@android:color/darker_gray"
+        android:paddingTop="10dp"/>
+
+</RelativeLayout>

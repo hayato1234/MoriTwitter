@@ -6,3 +6,6 @@
 .DS_Store
 /build
 /captures
+keystore.properties
+#for twitter api keys
+gradle.properties
