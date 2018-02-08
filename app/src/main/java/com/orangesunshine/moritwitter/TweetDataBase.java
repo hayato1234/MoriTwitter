@@ -96,21 +96,23 @@ public class TweetDataBase extends SQLiteOpenHelper {
         db.execSQL(sql);
     }
 
-    public void changeIsDisable(String userName,int accountNumber){
+    public void changeIsDisable(String userName,int accountNumber, boolean isDisable){
+        int disableNum;
+        if (isDisable) {disableNum = 1;}else {disableNum = 0;}
         SQLiteDatabase db = getWritableDatabase();
         String sql;
         switch (accountNumber){
             case 3:
-                sql = String.format("UPDATE %s SET %s = %s WHERE %s = '%s';", FOLLOWING_TB4, NEW_TWEETS,0,SCREEN_NAME,userName);
+                sql = String.format("UPDATE %s SET %s = %s WHERE %s = '%s';", FOLLOWING_TB4, NEW_TWEETS,disableNum,SCREEN_NAME,userName);
                 break;
             case 2:
-                sql = String.format("UPDATE %s SET %s = %s WHERE %s = '%s';", FOLLOWING_TB3, NEW_TWEETS,0,SCREEN_NAME,userName);
+                sql = String.format("UPDATE %s SET %s = %s WHERE %s = '%s';", FOLLOWING_TB3, NEW_TWEETS,disableNum,SCREEN_NAME,userName);
                 break;
             case 1:
-                sql = String.format("UPDATE %s SET %s = %s WHERE %s = '%s';", FOLLOWING_TB2, NEW_TWEETS,0,SCREEN_NAME,userName);
+                sql = String.format("UPDATE %s SET %s = %s WHERE %s = '%s';", FOLLOWING_TB2, NEW_TWEETS,disableNum,SCREEN_NAME,userName);
                 break;
             default:
-                sql = String.format("UPDATE %s SET %s = %s WHERE %s = '%s';", FOLLOWING_TB, NEW_TWEETS,0,SCREEN_NAME,userName);
+                sql = String.format("UPDATE %s SET %s = %s WHERE %s = '%s';", FOLLOWING_TB, NEW_TWEETS,disableNum,SCREEN_NAME,userName);
                 break;
         }
         db.execSQL(sql);

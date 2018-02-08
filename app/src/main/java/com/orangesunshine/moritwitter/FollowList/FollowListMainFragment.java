@@ -105,7 +105,7 @@ public class FollowListMainFragment extends Fragment {
                                 .setPositiveButton(R.string.show, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        tweetDataBase.changeIsDisable(user.getScreenName(), currentAccountNumber);
+                                        tweetDataBase.changeIsDisable(user.getScreenName(), currentAccountNumber,false);
                                         disabledList.remove(user.getScreenName());
                                         SharedPreferences.Editor editor = mSharedPreferences.edit();
                                         editor.putStringSet(DISABLED_LIST, disabledList);
@@ -119,7 +119,7 @@ public class FollowListMainFragment extends Fragment {
                                 .setPositiveButton(R.string.stop, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        tweetDataBase.changeIsDisable(user.getScreenName(),currentAccountNumber);
+                                        tweetDataBase.changeIsDisable(user.getScreenName(),currentAccountNumber,true);
                                         disabledList.add(user.getScreenName());
                                         SharedPreferences.Editor editor = mSharedPreferences.edit();
                                         editor.putStringSet(DISABLED_LIST, disabledList);

@@ -1,1 +1,13 @@
 /build
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/captures
+keystore.properties
+#for twitter api keys
+gradle.properties
+/app/fabric.properties
+/app/build/generated/source/buildConfig/androidTest/debug/com/orangesunshine/moritwitter/test/BuildConfig.java

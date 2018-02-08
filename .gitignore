@@ -12,3 +12,4 @@ keystore.properties
 gradle.properties
 /app/fabric.properties
 /app/build/generated/source/buildConfig/androidTest/debug/com/orangesunshine/moritwitter/test/BuildConfig.java
+src/main/res/drawable-v21/
